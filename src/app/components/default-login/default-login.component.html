@@ -1,0 +1,27 @@
+<main>
+    <section class="form-section">
+        <h1>{{ title }}</h1>
+        <p>{{ paragraph }}</p>
+        <ng-content></ng-content>
+        <div class="btn-wrapper">
+            <button 
+            class="btn-primary" 
+                (click)="submit()"
+                [disabled]="disablePrimaryBtn"
+                >{{ primary_btn_txt }}</button>
+            <div class="divider">
+                <div>
+                    <span>or</span>
+                </div>
+            </div>
+            <button 
+                class="btn-secondary"
+                (click)="navigate()"
+                >{{ secondary_btn_txt }}</button>
+        </div>
+    </section>
+    
+    <section class="main-section">
+        <img src="/assets/svg/img-login.svg" alt="">
+    </section>
+</main>

@@ -1,0 +1,34 @@
+<app-default-login
+    title="Login"
+    paragraph="Welcome back! Please enter your details."
+    primary_btn_txt="Login Now"
+    secondary_btn_txt="Signup"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]='!loginForm.valid'
+
+>
+<form [formGroup]="loginForm">
+    <app-primary-input
+    formControlName="email"
+    inputName="email"
+    type="email"
+    label="Email"
+    placeholder="your_email@hotmail.com"
+    >
+
+    </app-primary-input>
+    
+    <app-primary-input
+    formControlName="password"
+    inputName="password"
+    type="password"
+    label="Password"
+    placeholder="Your Password"
+    >
+
+    </app-primary-input>
+    <span>Forgot  password?</span>
+</form>
+
+</app-default-login>
